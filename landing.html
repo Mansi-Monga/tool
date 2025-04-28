@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">6    <title>SecureText - Encryption Tool</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to SecureText</h1>
+        <p>Your Simple Encryption and Decryption Tool</p>
+
+        <form id="encryption-form">
+            <label for="input-text">Input Text:</label><br>
+            <textarea id="input-text" rows="4" cols="50" placeholder="Enter your message here..."></textarea><br><br>
+
+            <label for="algorithm">Select Encryption Algorithm:</label><br>
+            <select id="algorithm">
+                <option value="aes">AES</option>
+                <option value="des">DES</option>
+                <option value="caesar">Caesar Cipher</option>
+                <option value="vigenere">Vigenère Cipher</option>
+                <option value="playfair">Playfair Cipher</option>
+                <option value="xor">XOR Cipher</option>
+            </select><br><br>
+
+            <label for="key">Enter Key (if needed):</label><br>
+            <input type="text" id="key" placeholder="Enter key here..."><br><br>
+
+            <label for="action">Choose Action:</label><br>
+            <input type="radio" id="encrypt" name="action" value="encrypt" checked>
+            <label for="encrypt">Encrypt</label><br>
+            <input type="radio" id="decrypt" name="action" value="decrypt">
+            <label for="decrypt">Decrypt</label><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="output" style="margin-top: 20px;">
+           <h3>Result:</h3>
+            <p id="result-text"></p>
+                        <button id="copy-button" style="display: none;">Copy to Clipboard</button>
+            <p id="suggestion" style="color: red; font-weight: bold; display: none;">For stronger security, consider using AES or DES.</p>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "SecureText Encryption Tool",
+    "version": "1.0",
+    "description": "A simple tool for encrypting and decrypting text using various algorithms.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "landing.html",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "background": {
+        "service_worker": "script.js"
+    },
+    
+    "web_accessible_resources": [
+        {
+            "resources": ["images/*"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+} 
